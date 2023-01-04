@@ -3,9 +3,23 @@ import { Nav, Container, Navbar, Form, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './style.css';
 import { strings, categories } from 'utils';
+{
+  /*
+  utils klasörü içerisindeki strings.ts ve categories.ts dosyalarını import ediyoruz.
+  */
+}
+
 
 export const Header = () => {
   const [keyword, setKeyword] = useState('')
+  {
+    /*
+      Header Componenti
+      Navbar ve Search Bar Componenti
+      Arama işlemi olursa search pathine yönlendirir.
+      kategori listesi için categories.ts içerisindeki kategorileri kullanıyoruz dinamik olarakda oluşturabiliriz.
+    */
+  }
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="md">

@@ -2,8 +2,15 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './style.css';
 import { Header } from 'components';
-import { CategoryScreen, AboutScreen, HomeScreen, SearchScreen } from 'pages';
-export const TestScreen = () => {
+import { CategoryScreen, HomeScreen, SearchScreen } from 'pages';
+export const MainScreen = () => {
+  {
+    /*
+    Header ve Routes componentlerini render ediyoruz.
+    Header componenti tüm sayfalarda görüneceği için burada render ediyoruz.
+    Routes componenti ise tüm sayfaları yönlendirmek için kullanıyoruz.
+    */
+  }
   return (
     <>
       <Header />
@@ -11,7 +18,6 @@ export const TestScreen = () => {
         <Route path="/" element={<HomeScreen /> } />
         <Route path="categories/:category" element={<CategoryScreen />} />
         <Route path="search/:q" element={<SearchScreen />} />
-        <Route path="about" element={<AboutScreen />} />
       </Routes>
     </>
   )

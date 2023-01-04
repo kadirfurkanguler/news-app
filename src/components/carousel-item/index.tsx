@@ -2,7 +2,10 @@ import React from 'react';
 import './style.css';
 import { Carousel, Row } from 'react-bootstrap';
 export const CarouselItem = ({ sliderNews }: any) => {
-
+  {/*
+    Anasayafadaki SLider Componenti
+    Gelen Anasayfa haber listesinin ilk 3 elemanı slider olarak gösterir.
+  */}
   return (
     <Row className="my-5">
       <Carousel>

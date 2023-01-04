@@ -6,6 +6,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Col, Container, Pagination, Row } from 'react-bootstrap';
 import { NewsCard } from 'components';
 export const SearchScreen = () => {
+  {
+    /*
+    Aranan kelimeye göre haberleri getiren sayfa
+    parametre olarak kelime  ve sayfa sayısı alır.
+    kelime ile haberleri getirir.
+    pagination ile 20'şer 20'şer haber getirir.
+    dispatch ile haberlerin global state'e kaydedilmesi için gerekli isteği atar.
+  */
+  }
   const { q } = useParams();
   const [page, setPage] = useState(0);
   const dispatch = useDispatch();

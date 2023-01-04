@@ -6,6 +6,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Col, Container, Pagination, Row } from 'react-bootstrap';
 import { NewsCard } from 'components';
 export const CategoryScreen = () => {
+{
+  /*
+    Kategorilere göre haberleri getiren sayfa
+    parametre olarak kategori id ve sayfa sayısı alır.
+    kategori id'si ile haberleri getirir.
+    pagination ile 20'şer 20'şer haber getirir.
+    dispatch ile haberlerin global state'e kaydedilmesi için gerekli isteği atar.
+  */
+}
   const { category } = useParams();
   const [page, setPage] = useState(0);
   const dispatch = useDispatch();

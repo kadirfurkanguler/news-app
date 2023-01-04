@@ -2,8 +2,18 @@ import React from 'react';
 import './style.css';
 import { Card, Button, Col } from 'react-bootstrap';
 import { strings } from 'utils';
+{
+  /*
+  utils klasörü içerisindeki strings.ts ve categories.ts dosyalarını import ediyoruz.
+  */
+}
 export const NewsCard = ({ news }: any) => {
   const { title, description, urlToImage, url } = news;
+  {
+    /*
+    Tıklandığında haber kaynağına yönlendirir.
+    */
+  }
   return (
     <Col md="4" >
       <Card >

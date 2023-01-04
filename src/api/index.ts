@@ -1,6 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+{
+  /*
+  Async işlemlerin kontolünü sağlamak için createAsyncThunk kullanılır.
+  axios ile api istekleri yapılır.
+  */
+}
 const getAll = createAsyncThunk(
   'news/all',
   async (page: number) => {

@@ -5,6 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Col, Container, Pagination, Row } from 'react-bootstrap';
 import { CarouselItem, NewsCard } from 'components';
 export const HomeScreen = () => {
+  {
+    /*
+      Anasayfa  haberlerini getiren sayfa
+      parametre olarak sayfa sayısı alır.
+      pagination ile 20'şer 20'şer haber getirir.
+      ilk 3 haberi slider olarak gösterir.
+      dispatch ile haberlerin global state'e kaydedilmesi için gerekli isteği atar.
+    */
+  }
   const [page, setPage] = useState(0);
   const dispatch = useDispatch();
   const { allNews, isLoading, allNewsLength } = useSelector((state: any) => state.news);
@@ -38,15 +47,15 @@ export const HomeScreen = () => {
                 <Col md="9" className="mx-auto"><CarouselItem sliderNews={allNews.slice(0, 3)} /></Col>
               </Row>
               <Col md="9" className="mx-auto">
-              <Row>
-                {
-                  allNews.slice(3, 20).map((news: any, index: number) => {
-                    return (
-                      <NewsCard news={news} key={index} />
-                    )
-                  })
-                }
-              </Row>
+                <Row>
+                  {
+                    allNews.slice(3, 20).map((news: any, index: number) => {
+                      return (
+                        <NewsCard news={news} key={index} />
+                      )
+                    })
+                  }
+                </Row>
               </Col>
               <Row>
                 <Col md="6" className="mx-auto d-flex justify-content-center">

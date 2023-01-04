@@ -4,15 +4,21 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import { store } from 'store';
-import { TestScreen } from 'pages';
+import { MainScreen } from 'pages';
 import { Provider } from 'react-redux';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+{
+  /*
+  Provider componenti ile store'u uygulamaya bağlıyoruz.
+  BrowserRouter componenti ile tüm sayfaları yönlendirmek için kullanıyoruz.
+  */
+}
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <TestScreen />
+      <MainScreen />
     </BrowserRouter>
   </Provider>
 );
